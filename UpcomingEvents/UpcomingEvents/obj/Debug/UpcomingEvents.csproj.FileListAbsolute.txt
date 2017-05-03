@@ -102,3 +102,8 @@ C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\Upcoming
 C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.pdb
 C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.first.resources
 C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.csproj.GenerateResource.Cache
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.second.resources
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.third.resources
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.fourth.resources
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.sixth.resources
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.seventh.resources

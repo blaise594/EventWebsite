@@ -208,6 +208,26 @@
     <Compile Include="Migrations\201705021948166_first.Designer.cs">
       <DependentUpon>201705021948166_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705031305511_second.cs" />
+    <Compile Include="Migrations\201705031305511_second.Designer.cs">
+      <DependentUpon>201705031305511_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031408026_third.cs" />
+    <Compile Include="Migrations\201705031408026_third.Designer.cs">
+      <DependentUpon>201705031408026_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031707432_fourth.cs" />
+    <Compile Include="Migrations\201705031707432_fourth.Designer.cs">
+      <DependentUpon>201705031707432_fourth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031730550_sixth.cs" />
+    <Compile Include="Migrations\201705031730550_sixth.Designer.cs">
+      <DependentUpon>201705031730550_sixth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031750504_seventh.cs" />
+    <Compile Include="Migrations\201705031750504_seventh.Designer.cs">
+      <DependentUpon>201705031750504_seventh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EventModel.cs" />
@@ -297,6 +317,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705021948166_first.resx">
       <DependentUpon>201705021948166_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031305511_second.resx">
+      <DependentUpon>201705031305511_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031408026_third.resx">
+      <DependentUpon>201705031408026_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031707432_fourth.resx">
+      <DependentUpon>201705031707432_fourth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031730550_sixth.resx">
+      <DependentUpon>201705031730550_sixth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031750504_seventh.resx">
+      <DependentUpon>201705031750504_seventh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

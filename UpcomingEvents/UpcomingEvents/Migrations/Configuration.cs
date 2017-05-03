@@ -1,6 +1,7 @@
 namespace UpcomingEvents.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -28,7 +29,7 @@ namespace UpcomingEvents.Migrations
                 manager.Create(role);
             }
 
-            var ownerEmail = "boss@gmail.com";
+            var ownerEmail = "danielbrogers594@gmail.com";
             var defaultPassword = "Password1!";
             if (!context.Users.Any(u => u.UserName == ownerEmail))
             {
@@ -40,7 +41,30 @@ namespace UpcomingEvents.Migrations
                 userManager.AddToRole(user.Id, boss);
             }
 
-            // Add a first account
+            
+            var concert = new GenreModel { type = "Concert" };
+
+           
+            context.Genres.AddOrUpdate(g => g.type, concert);
+
+            var venue = new VenueModel { name = "Janus" };
+            context.Venues.AddOrUpdate(v => v.name, venue);
+            context.SaveChanges();
+
+            var es = new List<EventModel>
+            {
+                new EventModel{title ="Band A", VenueId = venue.id, GenreId = concert.id, starttime = DateTime.Now},
+
+
+                new EventModel{title ="Band B", VenueId = venue.id, GenreId = concert.id,starttime = DateTime.Now},
+
+
+                new EventModel{title ="Band C", VenueId = venue.id, GenreId = concert.id,starttime = DateTime.Now},
+                new EventModel{title ="Band D", VenueId = venue.id, GenreId = concert.id, starttime = DateTime.Now},
+            };
+
+            es.ForEach(eve => context.Events.AddOrUpdate(e => e.title, eve));
+            context.SaveChanges();
         }
     }
 }
