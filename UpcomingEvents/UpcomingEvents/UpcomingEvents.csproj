@@ -199,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,6 +228,14 @@
     <Compile Include="Migrations\201705031750504_seventh.cs" />
     <Compile Include="Migrations\201705031750504_seventh.Designer.cs">
       <DependentUpon>201705031750504_seventh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705031945115_eigth.cs" />
+    <Compile Include="Migrations\201705031945115_eigth.Designer.cs">
+      <DependentUpon>201705031945115_eigth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705032021544_ninth.cs" />
+    <Compile Include="Migrations\201705032021544_ninth.Designer.cs">
+      <DependentUpon>201705032021544_ninth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -295,6 +304,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\EventModels\Create.cshtml" />
+    <Content Include="Views\EventModels\Delete.cshtml" />
+    <Content Include="Views\EventModels\Details.cshtml" />
+    <Content Include="Views\EventModels\Edit.cshtml" />
+    <Content Include="Views\EventModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -332,6 +346,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705031750504_seventh.resx">
       <DependentUpon>201705031750504_seventh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031945115_eigth.resx">
+      <DependentUpon>201705031945115_eigth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032021544_ninth.resx">
+      <DependentUpon>201705032021544_ninth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

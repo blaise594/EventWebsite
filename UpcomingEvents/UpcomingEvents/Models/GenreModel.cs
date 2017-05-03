@@ -10,6 +10,6 @@ namespace UpcomingEvents.Models
         public int id { get; set; }
         public string type { get; set; }
 
-        public ICollection<EventModel> Events { get; set; }
+        public ICollection<EventModel> Events { get; set; } = new HashSet<EventModel>();
     }
 }

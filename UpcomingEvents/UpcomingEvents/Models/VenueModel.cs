@@ -11,6 +11,6 @@ namespace UpcomingEvents.Models
         public string name { get; set; }
         public string address { get; set; }
 
-        public ICollection<EventModel> Events { get; set; }
+        public ICollection<EventModel> Events { get; set; } = new HashSet<EventModel>();
     }
 }

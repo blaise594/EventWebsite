@@ -1,15 +1,23 @@
 ﻿@model IEnumerable<UpcomingEvents.Models.EventModel>
-    
+
 
 <div class="jumbotron">
-    <h1>Welcome to My Events Page</h1>   
+    <h1>Welcome to My Events Page</h1>
 </div>
-
-@foreach (var eve in Model)
+@foreach (var Item in Model)  // Item is the List of the class Events
 {
     <div class="row">
         <div class="col-md-12">
-             <h2>@eve.title</h2>
-        </div>        
-    </div>
+                <ul>
+                @Item.title
+                @Html.DisplayFor(modelItem => Item.title)
+                @Html.DisplayFor(modelItem => Item.description)
+                @Html.DisplayFor(modelItem => Item.starttime)
+                @Html.DisplayFor(modelItem => Item.endtime)
+                @Html.DisplayFor(modelItem => Item.Venue)
+                @Html.DisplayFor(modelItem => Item.Genre)
+                </ul>
+            </div>
+        </div>
+
 }

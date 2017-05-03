@@ -107,3 +107,5 @@ C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\Upcoming
 C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.fourth.resources
 C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.sixth.resources
 C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.seventh.resources
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.eigth.resources
+C:\Users\Danny\tiy\week-8\day-2\UpcomingEvents\UpcomingEvents\obj\Debug\UpcomingEvents.Migrations.ninth.resources
