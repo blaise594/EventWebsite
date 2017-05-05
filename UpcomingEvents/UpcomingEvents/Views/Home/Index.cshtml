@@ -2,22 +2,55 @@
 
 
 <div class="jumbotron">
-    <h1>Welcome to My Events Page</h1>
+    <h1>Welcome To My Wepage</h1>
 </div>
-@foreach (var Item in Model)  // Item is the List of the class Events
-{
-    <div class="row">
-        <div class="col-md-12">
-                <ul>
-                @Item.title
-                @Html.DisplayFor(modelItem => Item.title)
-                @Html.DisplayFor(modelItem => Item.description)
-                @Html.DisplayFor(modelItem => Item.starttime)
-                @Html.DisplayFor(modelItem => Item.endtime)
-                @Html.DisplayFor(modelItem => Item.Venue)
-                @Html.DisplayFor(modelItem => Item.Genre)
-                </ul>
+<div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        view shopping cart <i class="glyphicon glyphicon-shopping-cart"></i>
+        @*@<span id="counter">@Model.ShoppingCart.Tickets.Count</span>*@
+    </button>
+</div>
+
+<div class="row">
+    @foreach (var evnt in Model.EventModel)
+    {
+        <div class="col-md-4">
+            <div class="media">
+                <div class="media-left">
+                    <button class="btn btn-primary" onclick="addToCart(@evnt.id)">Add To Cart</button>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">@evnt.Title</h4>
+                    <p>
+                        @evnt.Venue.Name
+                        at @evnt.StartDate
+                        <span class="label label-default"> @evnt.Genre.Name</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    }
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Shopping cart!</h4>
+            </div>
+            <div class="modal-body" id="modelBody">
+                @Html.Partial("_shoppingCart", Model.ShoppingCart)
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                @Html.ActionLink("Checkout", "Index", "Checkout", null, new { @type = "button", @class = "btn btn-success" })
             </div>
         </div>
+    </div>
+</div>
 
 }

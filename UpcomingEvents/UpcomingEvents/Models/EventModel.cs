@@ -13,11 +13,14 @@ namespace UpcomingEvents.Models
         public int id { get; set; }
         [Required]
         public string title { get; set; }
-        
+
         [DataType(DataType.Date)]
         public string description { get; set; }
         public DateTime? starttime { get; set; }
         public DateTime? endtime { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        public double Price { get; set; }
 
         // foreign key annnotations and virtual properties
         public int VenueId { get; set; }
@@ -27,5 +30,7 @@ namespace UpcomingEvents.Models
         public int GenreId { get; set; }
         [ForeignKey("GenreId")]
         public GenreModel Genre { get; set; }
+
+        public ICollection<TicketModel> TicketsSold { get; set; } = new HashSet<TicketModel>();
     }
 }
