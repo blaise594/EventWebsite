@@ -1,19 +1,22 @@
-﻿@model IEnumerable<UpcomingEvents.Models.EventModel>
-
+﻿@model UpcomingEvents.ViewModels.HomePageViewModel
+@{ 
+    ViewBag.Title = "Home Page";
+}
 
 <div class="jumbotron">
-    <h1>Welcome To My Wepage</h1>
+    <h1>Welcome To My Events Page</h1>
 </div>
+
 <div>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
         view shopping cart <i class="glyphicon glyphicon-shopping-cart"></i>
-        @*@<span id="counter">@Model.ShoppingCart.Tickets.Count</span>*@
+        <span id="counter">@Model.ShoppingCart.Tickets.Count</span>
     </button>
 </div>
 
 <div class="row">
-    @foreach (var evnt in Model.EventModel)
+    @foreach (var evnt in Model.Events)
     {
         <div class="col-md-4">
             <div class="media">
@@ -21,11 +24,11 @@
                     <button class="btn btn-primary" onclick="addToCart(@evnt.id)">Add To Cart</button>
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">@evnt.Title</h4>
+                    <h4 class="media-heading">@evnt.title</h4>
                     <p>
-                        @evnt.Venue.Name
-                        at @evnt.StartDate
-                        <span class="label label-default"> @evnt.Genre.Name</span>
+                        @evnt.Venue.name
+                        at @evnt.starttime
+                        <span class="label label-default"> @evnt.Genre.type</span>
                     </p>
                 </div>
             </div>
@@ -35,6 +38,7 @@
     }
 </div>
 
+@*
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -53,4 +57,6 @@
     </div>
 </div>
 
-}
+
+
+*@
