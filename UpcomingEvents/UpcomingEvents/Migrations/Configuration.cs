@@ -63,11 +63,16 @@ namespace UpcomingEvents.Migrations
                 new EventModel{title ="Band D", VenueId = venue.id, GenreId = concert.id, starttime = DateTime.Now},
             };
 
+            var os = new OrderModel { UserId = "552831a0-bef9-4b2b-a6ec-5fc90182530f" };
+            context.Orders.AddOrUpdate(o => o.Id, os);
+            context.SaveChanges();
+
             for (int i = 0; i < 20; i++)
             {
                 var ticket = new TicketModel
                 {
-                    EventId = 3
+                    EventId = 3,
+                    OrderId = 2
                 };
 
                 context.Tickets.AddOrUpdate(t => t.Id, ticket);
@@ -79,7 +84,8 @@ namespace UpcomingEvents.Migrations
             {
                 var ticket = new TicketModel
                 {
-                    EventId = 4
+                    EventId = 4,
+                    OrderId = 2
                 };
 
                 context.Tickets.AddOrUpdate(t => t.Id, ticket);
@@ -91,7 +97,8 @@ namespace UpcomingEvents.Migrations
             {
                 var ticket = new TicketModel
                 {
-                    EventId = 5
+                    EventId = 5,
+                    OrderId = 2
                 };
 
                 context.Tickets.AddOrUpdate(t => t.Id, ticket);
@@ -103,7 +110,8 @@ namespace UpcomingEvents.Migrations
             {
                 var ticket = new TicketModel
                 {
-                    EventId = 6
+                    EventId = 6,
+                    OrderId = 2
                 };
 
                 context.Tickets.AddOrUpdate(t => t.Id, ticket);
@@ -115,14 +123,17 @@ namespace UpcomingEvents.Migrations
             {
                 var ticket = new TicketModel
                 {
-                    EventId = 7
+                    EventId = 7,
+                    OrderId = 2
                 };
 
                 context.Tickets.AddOrUpdate(t => t.Id, ticket);
                 context.SaveChanges();
 
             }
-            
+
+
+
 
             es.ForEach(eve => context.Events.AddOrUpdate(e => e.title, eve));
             context.SaveChanges();
