@@ -34,14 +34,10 @@ namespace UpcomingEvents.Controllers
             }
             // too get the 
             var itemToAdd = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id);            
-            {
-                Order = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id) 
-            };
+           
             // add item select to shopping cart
-            foreach (var item in itemToAdd.Tickets)
-            {
-                cart.Tickets.Add(item);
-            }
+            
+
             Session["cart"] = cart;
             return PartialView("_shoppingCart", cart);
         }
