@@ -33,13 +33,12 @@ namespace UpcomingEvents.Controllers
                 };
             }
             // too get the 
-            var itemToAdd = new ApplicationDbContext().Orders.FirstOrDefault(f => f.Id == id);
-            var itemToAdd0 = new OrderModel()
+            var itemToAdd = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id);            
             {
-                Tickets = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id) as ICollection<TicketModel>
+                Order = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id) 
             };
             // add item select to shopping cart
-            foreach (var item in itemToAdd0.Tickets)
+            foreach (var item in itemToAdd.Tickets)
             {
                 cart.Tickets.Add(item);
             }
