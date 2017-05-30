@@ -37,10 +37,12 @@
 
     }
 </div>
-
-@Html.Partial("_shoppingCart", Model.ShoppingCart)
+<div id="shoppingCart">
+    @Html.Partial("_shoppingCart", Model.ShoppingCart)
+</div>
 
 @*
+</div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
