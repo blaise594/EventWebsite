@@ -32,7 +32,7 @@ namespace UpcomingEvents.Controllers
                     TimeCreated = DateTime.Now
                 };
             }
-            // too get the 
+            // too get the ticket
             var itemToAdd = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id);
 
             // add item select to shopping cart
