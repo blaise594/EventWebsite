@@ -33,11 +33,11 @@ namespace UpcomingEvents.Controllers
                 };
             }
             // too get the 
-            var itemToAdd = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id);            
-           
-            // add item select to shopping cart
-            
+            var itemToAdd = new ApplicationDbContext().Tickets.FirstOrDefault(f => f.Id == id);
 
+            // add item select to shopping cart
+
+            cart.Tickets.Add(itemToAdd);
             Session["cart"] = cart;
             return PartialView("_shoppingCart", cart);
         }
