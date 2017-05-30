@@ -19,10 +19,49 @@ namespace UpcomingEvents.Controllers
             vm.ShoppingCart = Session["shoppingCart"] as OrderModel ?? new OrderModel();
             return View(vm);
         }
-     
-              
 
-         public ActionResult About()
+        [HttpPost]
+        public ActionResult ShoppingCart(int id)
+        {
+            var cart = Session["cart"] as OrderModel;
+            if (cart == null)
+            {
+                // create a new cart
+                cart = new OrderModel()
+                {
+                    TimeCreated = DateTime.Now
+                };
+            }
+            // too get the 
+            var itemToAdd = new ApplicationDbContext().Orders.Include(i => i.Tickets).FirstOrDefault(f => f.Id == id);
+            // add item select to shopping cart
+            foreach (var item in itemToAdd.Tickets)
+            {
+                cart.Tickets.Add(item);
+            }
+            Session["cart"] = cart;
+            return PartialView("_shoppingCart", cart);
+        }
+
+        [HttpDelete]
+        public ActionResult RemoveFromCart(int id)
+        {
+
+            var cart = Session["cart"] as OrderModel;
+            cart.Tickets = cart.Tickets.Where(w => w.Id == id) as ICollection<TicketModel>;
+            return PartialView("_checkoutDisplayCart", cart);
+        }
+
+
+        public ActionResult Checkout()
+        {
+            // Shopping Cart (order) as the model
+            var vm = Session["cart"] as OrderModel;
+            return View(vm);
+        }
+
+
+        public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
 

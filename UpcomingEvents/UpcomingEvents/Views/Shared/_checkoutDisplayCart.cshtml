@@ -1,0 +1,14 @@
+﻿@model UpcomingEvents.Models.OrderModel
+
+
+@foreach (var item in Model.Tickets)
+{
+    @Html.Partial("_cartRow", item)
+}
+
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-8">
+        @Html.DisplayFor(m => m.TotalPrice, Model.TotalPrice)
+    </div>
+</div>

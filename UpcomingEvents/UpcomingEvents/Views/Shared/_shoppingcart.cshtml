@@ -1,13 +1,13 @@
 ﻿@model UpcomingEvents.Models.OrderModel
 
 
-@if (Model.Items.Any())
+@if (Model.Tickets.Any())
 {
     <h3>Your Cart:</h3>
     <ul>
-        @foreach (var item in Model.Items)
+        @foreach (var item in Model.Tickets)
         {
-            <li>@item.name</li>
+            <li>@item.Id</li>
         }
     </ul>
     @Html.ActionLink("Checkout", "Checkout", "Home")

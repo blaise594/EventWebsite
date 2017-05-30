@@ -63,6 +63,67 @@ namespace UpcomingEvents.Migrations
                 new EventModel{title ="Band D", VenueId = venue.id, GenreId = concert.id, starttime = DateTime.Now},
             };
 
+            for (int i = 0; i < 20; i++)
+            {
+                var ticket = new TicketModel
+                {
+                    EventId = 3
+                };
+
+                context.Tickets.AddOrUpdate(t => t.Id, ticket);
+                context.SaveChanges();
+
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                var ticket = new TicketModel
+                {
+                    EventId = 4
+                };
+
+                context.Tickets.AddOrUpdate(t => t.Id, ticket);
+                context.SaveChanges();
+
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                var ticket = new TicketModel
+                {
+                    EventId = 5
+                };
+
+                context.Tickets.AddOrUpdate(t => t.Id, ticket);
+                context.SaveChanges();
+
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                var ticket = new TicketModel
+                {
+                    EventId = 6
+                };
+
+                context.Tickets.AddOrUpdate(t => t.Id, ticket);
+                context.SaveChanges();
+
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                var ticket = new TicketModel
+                {
+                    EventId = 7
+                };
+
+                context.Tickets.AddOrUpdate(t => t.Id, ticket);
+                context.SaveChanges();
+
+            }
+            
+
             es.ForEach(eve => context.Events.AddOrUpdate(e => e.title, eve));
             context.SaveChanges();
         }

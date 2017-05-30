@@ -318,6 +318,7 @@
     <Content Include="Views\EventModels\Edit.cshtml" />
     <Content Include="Views\EventModels\Index.cshtml" />
     <Content Include="Views\Shared\_shoppingCart.cshtml" />
+    <Content Include="Views\Shared\_checkoutDisplayCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
